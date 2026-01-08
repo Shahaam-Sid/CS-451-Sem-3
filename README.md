@@ -12,6 +12,8 @@ This repository contains theory and practical implementations of Data Structures
 - [**Binary Search (Multiple)**](./Search%20and%20Sort/Binary%20Search/binarySearchMulti.cpp) - Implementation of Binary Search for Repeated element
 - [**Linear Search (Single)**](./Search%20and%20Sort/Linear%20Search/linearSearch.cpp) - Implementation of linear Search for Single element
 - [**Linear Search (Multiple)**](./Search%20and%20Sort/Linear%20Search/linearSearchMultiple.cpp) - Implementation of Linear Search for Repeated element
+- [**Bubble Sort**](./Search%20and%20Sort/Bubble%20Sort/bubbleSort.cpp) - Implementation of Bubble Sort
+- [**Selection Sort**](./Search%20and%20Sort/Selection%20Sort/selectionSort.cpp) - Implementation of Selection Sort
 
 ## Getting Started
 
@@ -53,9 +55,15 @@ CS-451-Sem-3
     │       binarySearch.cpp
     │       binarySearchMulti.cpp
     │
-    └───Linear Search
-            linearSearch.cpp
-            linearSearchMultiple.cpp
+    ├───Linear Search
+    │      linearSearch.cpp
+    │      linearSearchMultiple.cpp
+    │
+    ├───Bubble Sort
+    │       bubbleSort.cpp
+    │
+    └───Selection Sort
+            selectionSort.cpp
 ```
 
 ---
