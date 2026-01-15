@@ -1,24 +1,5 @@
 #include <iostream>
 
-void selectionSort(int arr[], int size);
-
-int main()
-{
-    int nums[] = {7, 12, 9, 11, 3};
-
-    int len = sizeof(nums) / sizeof(int);
-
-    selectionSort(nums, len);
-
-    std::cout << "Sorted Array:" << std::endl;
-
-    for (int i = 0; i < len; i++)
-    {
-        std::cout << nums[i] << " ";
-    }
-    
-}
-
 void selectionSort(int arr[], int size)
 {
     int min;
@@ -41,5 +22,4 @@ void selectionSort(int arr[], int size)
         arr[minIndex] = arr[i];
         arr[i] = min;
     }
-    
 }

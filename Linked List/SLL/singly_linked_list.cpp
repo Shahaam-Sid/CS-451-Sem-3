@@ -1,4 +1,5 @@
 #include <iostream>
+
 // Struct Method
 struct LLNode
 {
@@ -8,7 +9,7 @@ struct LLNode
 
 LLNode* list = nullptr;
 
-void insert(int value)
+void insert(int value, LLNode** listPtr)
 {
     LLNode* temp;
     // allocating Memory
@@ -16,11 +17,11 @@ void insert(int value)
 
     temp->data = value;
     temp->next = nullptr;
-    if (list == nullptr)
+    if (*listPtr == nullptr)
     {
-        list = temp;
+        *listPtr = temp;
     } else {
-        LLNode* curr = list;
+        LLNode* curr = *listPtr;
         while (curr->next != nullptr)
         {
             curr = curr->next;
@@ -28,8 +29,15 @@ void insert(int value)
         curr->next = temp;
     }
 }
+
 void display(LLNode* lln)
 {
+    if (lln == nullptr)
+    {
+        std::cout << "List is empty" << std::endl;
+        return;
+    }
+    
     if (lln->next == nullptr)
     {
         std::cout << lln->data << std::endl;
@@ -43,8 +51,15 @@ void display(LLNode* lln)
     }
     std::cout << lln->data << std::endl;
 }
+
 int search(int i, LLNode* lln)
 {
+    if (lln == nullptr)
+    {
+        std::cout << "List is empty" << std::endl;
+        return -1;
+    }
+    
     int index = 0;
     while (lln->next != nullptr)
     {
@@ -61,10 +76,41 @@ int search(int i, LLNode* lln)
     }
     else 
     {
-        std::cout << "Element Not Found";
+        std::cout << "Element Not Found" << std::endl;
     }
     return -1;
+}
 
+void deleteNode(int value, LLNode** listPtr) 
+{
+    if (*listPtr == nullptr)
+    {
+        std::cout << "List is empty" << std::endl;
+        return;
+    }
+
+    LLNode* curr = *listPtr;
+    
+    if (curr->data == value)
+    {
+        *listPtr = curr->next;
+        free(curr);
+        return;
+    }
+    LLNode* prev = nullptr;
+    while (curr != nullptr && curr->data != value)
+    {
+        prev = curr;
+        curr = curr->next;
+    }
+    
+    if (curr == nullptr)
+    {
+        return;
+    }
+
+    prev->next = curr->next;
+    free(curr);
 }
 
 int main()
@@ -73,7 +119,8 @@ int main()
     int userInput;
     int t;
     std::cout << "Choose any one of the following: " << std::endl;
-    std::cout << "1 to Insert \n" << "2 to Display \n" << "3 to Search\n" << "4 to Delete\n" << "5 to Exit\n";
+    std::cout << "1 to Insert \n" << "2 to Display \n" << "3 to Search\n" <<
+                 "4 to Delete\n" << "5 to Exit\n";
 
     while (true)
     {    
@@ -86,7 +133,7 @@ int main()
         case 1:
             std::cout << "Input integer to insert: ";
             std::cin >> userInput;
-            insert(userInput);
+            insert(userInput, &list);
             break;
         case 2:
             display(list);
@@ -96,15 +143,18 @@ int main()
             std::cin >> userInput;
             t = search(userInput, list);
             if (t != -1){
-                std::cout << t << std::endl;
+                std::cout << "Found at index: " << t << std::endl;
             }
             break;
         case 4:
+            std::cout << "Input integer to delete: ";
+            std::cin >> userInput;
+            deleteNode(userInput, &list);
             break;
         case 5:
             return 0;
         default:
-            std::cout << "Invalid Input";
+            std::cout << "Invalid Input" << std::endl;
         }
     }
 }

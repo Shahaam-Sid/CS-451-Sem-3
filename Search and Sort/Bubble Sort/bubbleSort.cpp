@@ -1,23 +1,5 @@
 #include <iostream>
 
-void bubbleSort(int arr[], int size);
-
-int main()
-{
-    int nums[] = {7, 12, 9, 11, 3};
-    int len = sizeof(nums) / sizeof(int);
-
-    bubbleSort(nums, len);
-
-    std::cout << "Sorted Array:" << std::endl;
-    for (int i = 0; i < len; i++)
-    {
-        std::cout << nums[i] << " ";
-    }
-    
-    return 0;
-}
-
 void bubbleSort(int arr[], int size) {
 
     int temp;

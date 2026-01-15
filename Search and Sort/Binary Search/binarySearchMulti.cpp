@@ -1,26 +1,5 @@
 #include <iostream>
 
-int binarySearchMulti(int arr[], int x, int size, int indexes[]);
-
-int main()
-{
-    int arr[] = {10, 20, 20, 30, 40, 50};
-    int x = 20;
-    int len = sizeof(arr) / sizeof(int);
-    int indexes[len];
-
-    int c = binarySearchMulti(arr, x, len, indexes);
-
-    std::cout << "Element " << x << " found at indexes: " << std::endl;
-
-    for (int i = 0; i < c; i++)
-    {
-        std::cout << indexes[i] << std::endl;
-    }
-    
-    return 0;
-}
-
 int binarySearchMulti(int arr[], int x, int size, int indexes[]) {
     int count = 0;
     int l = 0;

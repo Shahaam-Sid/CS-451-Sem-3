@@ -14,6 +14,11 @@ This repository contains theory and practical implementations of Data Structures
 - [**Linear Search (Multiple)**](./Search%20and%20Sort/Linear%20Search/linearSearchMultiple.cpp) - Implementation of Linear Search for Repeated element
 - [**Bubble Sort**](./Search%20and%20Sort/Bubble%20Sort/bubbleSort.cpp) - Implementation of Bubble Sort
 - [**Selection Sort**](./Search%20and%20Sort/Selection%20Sort/selectionSort.cpp) - Implementation of Selection Sort
+- [**Insertion Sort**](./Search%20and%20Sort/Insertion%20Sort/insertionSort.cpp) - Implementation of Insertion sort
+
+#### 2. Linked List
+- [**Singly Linked List w/o OO**](./Linked%20List/SLL/singly_linked_list.cpp) - Singly Linked List Implementation Function Based
+- [**Singly Linked List w OO**](./Linked%20List/SLL/singly_linked_list2.cpp) - Singly Linked List Implementation OO Based
 
 ## Getting Started
 
@@ -42,28 +47,6 @@ This repository contains theory and practical implementations of Data Structures
 4. Run the executable:
 ```bash
    ./binarySearch
-```
-
-## Repository Structure
-```
-CS-451-Sem-3
-│   .gitignore
-│   README.md
-│       
-└───Search and Sort
-    ├───Binary Search
-    │       binarySearch.cpp
-    │       binarySearchMulti.cpp
-    │
-    ├───Linear Search
-    │      linearSearch.cpp
-    │      linearSearchMultiple.cpp
-    │
-    ├───Bubble Sort
-    │       bubbleSort.cpp
-    │
-    └───Selection Sort
-            selectionSort.cpp
 ```
 
 ---
