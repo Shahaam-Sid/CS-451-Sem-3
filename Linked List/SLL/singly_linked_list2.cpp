@@ -39,7 +39,11 @@ class SinglyLinkedList
         }
         void display()
         {
-            std::cout << "Size: " << size << std::endl;
+            if (size == 0)
+            {
+                std::cout << "No Element Found" << std::endl;
+                return;
+            }
             Node* curr = head;
             while (curr->next != nullptr)
             {
@@ -48,7 +52,6 @@ class SinglyLinkedList
             }
             std::cout << curr->element << std::endl;        
         }
-
         int search(T data)
         {
             if (size == 0) {return -1;}
@@ -105,8 +108,6 @@ class SinglyLinkedList
                 Node* temp = current;
                 current = current->next;
                 delete temp;
-            }
-            
-        }
-    
+            }   
+        } 
 };
