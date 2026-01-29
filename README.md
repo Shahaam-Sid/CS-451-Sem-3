@@ -24,7 +24,7 @@ This repository contains theory and practical implementations of Data Structures
 - [**Singly Linked List w OO**](./Linked%20List/SLL/singly_linked_list2.cpp) - Singly Linked List Implementation OO Based
 - [**Circular Linked List**](./Linked%20List/CLL/circular_linked_list.cpp) - Circular Linked List Implementation
 - [**Double Linked List**](./Linked%20List/DLL/doubly_linked_list.cpp) - Doubly Linked List Implementation
--[**Multilist**](./Linked%20List/MultiList/multiList.cpp) - Multilist Implementation of Courses and Students
+- [**Multilist**](./Linked%20List/MultiList/multiList.cpp) - Multilist Implementation of Courses and Students
 
 #### 3. Stack
 -[**LL based Stack**](./Stack/Stack.cpp) - Linked List based Stack Implementation
