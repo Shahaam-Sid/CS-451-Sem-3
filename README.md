@@ -27,7 +27,9 @@ This repository contains theory and practical implementations of Data Structures
 - [**Multilist**](./Linked%20List/MultiList/multiList.cpp) - Multilist Implementation of Courses and Students
 
 #### 3. Stack
--[**LL based Stack**](./Stack/Stack.cpp) - Linked List based Stack Implementation
+
+- [**LL based Stack**](./Stack/Stack.cpp) - Linked List based Stack Implementation
+- [**Array based Stack**](./Stack/ArrStack.cpp) - Array based Stack Implementation
 
 ## Getting Started
 
